@@ -1,0 +1,43 @@
+@page
+@model DeLaSalle.Ecommerce.WebSite.Pages.Brand.Delete
+
+<div class="container-fluid">
+    
+    <div class="row">
+        <div class="col-md-1">
+            
+        </div>
+        <div class="col-md-10">
+            <h2>Delete</h2>
+            <div class="alert alert-danger">
+                Are you sure to delete this element?
+            </div>
+            <form action="" method="post">
+                <input type="hidden" asp-for="BrandDto.Id"/>
+                <div class="form-group">
+                    <label asp-for="BrandDto.Name"></label>
+                    <input asp-for="BrandDto.Name" class="form-control" maxlength="45" readonly>
+                    <span class="text-danger" asp-validation-for="BrandDto.Name"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="BrandDto.Description"></label>
+                    <input asp-for="BrandDto.Description" class="form-control" maxlength="100" readonly>
+                    <span class="text-danger" asp-validation-for="BrandDto.Description"></span>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-12 text-right">
+                        <button type="submit" class="btn btn-danger mr-3">
+                            Delete
+                        </button>
+                        <a class="btn btn-secondary" a-asp-area="" asp-page="/Brand/List">Cancel</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-1">
+            
+        </div>
+    </div>
+    
+</div>
